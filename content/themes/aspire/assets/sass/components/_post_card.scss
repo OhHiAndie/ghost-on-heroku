@@ -1,0 +1,159 @@
+//---------------------------
+//
+// Post
+//
+//---------------------------
+
+.post-card {
+  margin-bottom: $line-height__medium;
+  padding-bottom: $line-height__medium;
+
+  border-bottom: 1px solid $border-color;
+
+  &__header {
+    margin-bottom: half($line-height__base);
+  }
+
+  &__image {
+    margin-bottom: half($line-height__base);
+    transition: $base-transition-speed;
+
+    @media #{$medium-down} {
+      margin-bottom: half($line-height__medium);
+    }
+  }
+
+  &__title {
+    font-size: $font-size__medium;
+    line-height: $line-height__medium;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    a {
+      display: block;
+      border-bottom: none;
+      transition: $base-transition-speed;
+
+      &:hover { color: $brand-color; }
+    }
+  }
+
+  &__meta {
+    margin-bottom: quarter($line-height__base);
+    font-size: $font-size__tiny;
+    line-height: $line-height__small;
+    color: $color__type--hover;
+
+    a { color: $color__type--hover; text-decoration: none; }
+  }
+
+  &:hover {
+    .post-card__image {
+      opacity: 0.9;
+    }
+
+    .post-card__title a { color: $brand-color; }
+  }
+
+  &--featured {
+    &__icon {
+      position: absolute;
+      bottom: quarter($line-height__base);
+      left: quarter($line-height__base);
+      fill: #fff;
+    }
+  }
+
+  @media #{$large-up} {
+    margin-bottom: $line-height__base;
+    padding-bottom: $line-height__base;
+  }
+}
+
+// Change the style of the First Post in home page
+
+.post--first {
+  width: 100%;
+
+  @media #{$medium-up} {
+
+    .post-card {
+      position: relative;
+
+      &__info {
+        display: table;
+        position: absolute;
+        top: 50%;
+        width: 50%;
+        z-index: 100;
+        left: $line-height__base * 3;
+        transform: translate(0, -50%);
+      }
+
+      &__meta {
+        color: #fff;
+        display: table-footer-group;
+
+        a { color: #fff; }
+      }
+
+      &__image {
+        position: relative;
+        z-index: 100;
+        margin-bottom: 0;
+
+        outline: 2px solid rgba(255, 255, 255, 0.4);
+        outline-offset: -$line-height__base / 3;
+
+        &:after {
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          content: "";
+          background: rgba(0, 0, 0, 0.15);
+        }
+      }
+
+      &__title {
+        font-size: double($font-size__medium);
+        line-height: double($line-height__medium);
+        font-weight: $font-weight__light;
+
+        color: #fff;
+
+        a { color: #fff; }
+
+        @media #{$large-up} {
+          font-size: double($font-size__base);
+        }
+      }
+
+      &--featured__icon {
+        bottom: half($line-height__base);
+        left: half($line-height__base);
+      }
+
+      &:hover {
+        .post-card__title a { color: #fff; }
+        .post-card__image { outline: 2px solid rgba(255, 255, 255, 0.8); }
+      }
+
+    } // .post-card
+  } // @media
+}
+
+// Make post cards the same height
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .post-card-wrap {
+    display: flex;
+  }
+
+  .post-card {
+    width: 100%;
+  }
+}

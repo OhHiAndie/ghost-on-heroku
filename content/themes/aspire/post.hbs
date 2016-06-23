@@ -1,0 +1,52 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+  <div class="grey-bg CoverImage FlexEmbed FlexEmbed--16by9" {{#if image}} style="background-image: url({{image}}) {{/if}}"></div>
+
+  <div class="wrapper">
+
+    <div class="row">
+
+      <div class="medium-8 large-8 column">
+        <article class="{{post_class}}">
+
+          <header class="post__header">
+            <h2 class="post__title">{{ title }}</h2>
+            <time class="post__date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+          </header>
+
+          <div class="post-content">
+            {{ content }}
+            <div class="post__tags">
+              {{tags separator=""}}
+            </div>
+          </div>
+
+          <hr>
+
+          {{> author}}
+          {{> share}}
+          {{> post-prev-next-pagination}}
+          {{> disqus}}
+
+        </article>
+      </div>
+
+      <div class="medium-4 large-4 column">
+        {{> sidebar}}
+      </div>
+
+    </div>{{!-- row --}}
+
+    <div class="row">
+      {{> related-posts}}
+    </div>
+
+  </div>{{!-- wrapper --}}
+
+{{/post}}

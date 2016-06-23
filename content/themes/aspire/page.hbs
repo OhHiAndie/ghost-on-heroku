@@ -1,0 +1,32 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+
+{{#post}}
+
+<div class="grey-bg CoverImage FlexEmbed FlexEmbed--3by1" {{#if image}} style="background-image: url({{image}}) {{/if}}"></div>
+
+<div class="wrapper">
+  <div class="row">
+    <div class="medium-9 large-8 column column--center">
+
+      <article class="{{post_class}}">
+
+        <header class="post__header text-center">
+          <h2 class="post__title">{{ title }}</h2>
+        </header>
+
+        <div class="post-content">
+          {{ content }}
+        </div>
+
+      </article>
+
+    </div>
+  </div>
+</div>
+
+{{/post}}

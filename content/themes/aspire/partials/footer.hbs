@@ -1,0 +1,88 @@
+<footer class="site-footer">
+
+  <div class="row">
+    <div class="column large-12">
+      <div class="site-footer__top">
+        <div class="row">
+
+          <div class="site-footer__section column medium-3 large-3">
+            <a href="{{@blog.url}}">{{@blog.title}}</a>
+          </div>
+
+          <div class="site-footer__section column medium-3 large-3">
+            <nav>
+              <ul class="list-bare site-footer__nav">
+                {{navigation}}
+                <li><a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">RSS</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="site-footer__section column medium-3 large-3">
+            <ul class="site-footer__nav social-icons list-bare">
+              <li>
+                <a href="http://www.twitter.com/{{! Add Twitter handle }}" target="_blank">
+                  <span data-icon="ei-sc-twitter" data-size="s"></span>
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/{{! Add Facebook handle }}" target="_blank">
+                  <span data-icon="ei-sc-facebook" data-size="s"></span>
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/{{! Add Instagram handle }}" target="_blank">
+                  <span data-icon="ei-sc-instagram" data-size="s"></span>
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://pinterest.com/{{! Add Pinterest handle }}" target="_blank" class="block">
+                  <span data-icon="ei-sc-pinterest" data-size="s"></span>
+                  Pinterest
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="site-footer__section column medium-3 large-3">
+            <p class="font-medium">
+              Newsletter
+            </p>
+            {{!-- Replace the action value with your one from MailChimp --}}
+            <form action="//aspirethemes.us12.list-manage.com/subscribe/post?u=9723f3c5c3a2637fbba3bc673&amp;id=7b50db9989" method="post" target="_blank">
+              <input type="email" name="EMAIL" placeholder="Your email address">
+              <input type="submit" class="button button--expand" value="SIGN UP">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column large-12">
+      <div class="site-footer__bottom">
+        <div class="row">
+
+          <div class="column medium-6 large-6">
+            <div class="font-tiny">
+              &copy; {{date format="YYYY"}} {{@blog.title}}
+            </div>
+          </div>
+
+          <div class="column medium-6 large-6 poweredby">
+            <div class="font-tiny">
+              Powered by <a href="https://ghost.org">Ghost</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>

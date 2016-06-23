@@ -1,0 +1,97 @@
+//---------------------------
+//
+// Header
+//
+//---------------------------
+
+.logo {
+  display: block;
+  margin-bottom: 0;
+  line-height: $line-height__base;
+
+  @media #{$medium-down} { line-height: $line-height__medium; }
+
+  a {
+    transition: $base-transition-speed;
+    text-decoration: none;
+    letter-spacing: 1px;
+
+    &:hover { color: $color__type--hover; }
+  }
+
+  &__img {
+    max-height: $line-height__medium;
+    vertical-align: middle;
+
+    @media #{$medium-up} { max-height: $line-height__base; }
+  }
+}
+
+.site-header {
+  position: relative;
+  padding: half($line-height__medium) 0;
+  border-bottom: 1px solid $border-color;
+  line-height: $line-height__medium;
+
+  &__navigation {
+    li {
+      display: inline-block;
+      margin-right: 20px;
+
+      font-size: $font-size__small;
+      line-height: $line-height__base;
+
+      @media #{$medium-down} {
+        display: block;
+        margin-right: 0;
+      }
+    }
+
+    a {
+      transition: $base-transition-speed;
+      text-decoration: none;
+
+      @media #{$medium-down} {
+        display: block;
+        padding-top: quarter($line-height__base);
+        padding-bottom: quarter($line-height__base);
+        border-bottom: 1px solid $border-color;
+      }
+    }
+
+    @media #{$medium-down} {
+      margin-bottom: quarter($line-height__base);
+    }
+  }
+
+  &__social-nav {
+    text-align: right;
+
+    .icon {
+      vertical-align: middle;
+
+      @media #{$large-up} {
+        vertical-align: -moz-middle-with-baseline;
+        vertical-align: -webkit-baseline-middle;
+      }
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    @media #{$medium-down} {
+      text-align: center;
+    }
+  }
+
+  @media #{$large-up} {
+    padding: half($line-height__base) 0;
+  }
+}
+
+// Remove border bottom in posts page, so the image will look cleaner
+
+.post-template .site-header {
+  border-bottom: 0;
+}

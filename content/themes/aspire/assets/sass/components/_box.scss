@@ -1,0 +1,53 @@
+//---------------------------
+//
+// Box
+//
+//---------------------------
+
+.box {
+  padding-bottom: $line-height__medium;
+  margin-bottom: $line-height__medium;
+  overflow: hidden;
+
+  border-bottom: 1px solid $border-color;
+
+  @media #{$large-up} {
+    padding-bottom: $line-height__base;
+    margin-bottom: $line-height__base;
+  }
+
+  &--author {
+    padding: $line-height__medium;
+    background-color: $grey-bg;
+
+    @media #{$large-up} {
+      padding: $line-height__base;
+    }
+  }
+
+  a { text-decoration: none; }
+}
+
+.box__icon {
+  float: left;
+  width: $line-height__base;
+  margin-right: $line-height__base / 3;
+}
+
+.box__title {
+  margin: 0;
+  font-weight: 300;
+  line-height: $line-height__medium;
+}
+
+.box__body {
+  overflow: hidden;
+}
+
+.box__text {
+  margin-top: half($line-height__small);
+  margin-bottom: 0;
+
+  font-size: $font-size__small;
+  line-height: $line-height__small;
+}
