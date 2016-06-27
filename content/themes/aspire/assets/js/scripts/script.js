@@ -154,7 +154,7 @@ $(document).ready(function() {
   // ==============
 
   var twitterWidget = true;         // Set to false to hide the Twitter widget
-  var twitterWidgetID = '677398615455834112'; // ID of your Twitter widget
+  var twitterWidgetID = '488095150267039744'; // ID of your Twitter widget
 
   if (twitterWidget && $('#twitter-widget').length) {
     var twitterConfig = {
