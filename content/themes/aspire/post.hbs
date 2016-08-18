@@ -12,16 +12,13 @@ the {body} of the default.hbs template, which contains our header/footer. }}
 
     <div class="row">
 
-      <div class="column">
-        <div class="grey-bg CoverImage FlexEmbed FlexEmbed--16by9" {{#if image}} style="background-image: url({{image}}) {{/if}}"></div>
-      </div>
-
       <div class="medium-8 large-8 column">
         <article class="{{post_class}}">
 
           <header class="post__header">
             <h2 class="post__title">{{ title }}</h2>
-            <time class="post__date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+        <div class="grey-bg CoverImage FlexEmbed FlexEmbed--16by9" {{#if image}} style="background-image: url({{image}}) {{/if}}"></div>
+      </div>
           </header>
 
           <div class="post-content">
