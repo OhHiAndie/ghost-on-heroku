@@ -15,6 +15,8 @@
     margin-bottom: half($line-height__medium);
     font-size: double($font-size__medium);
     line-height: double($line-height__medium);
+    font-variant: small-caps;
+    border-bottom: 5px solid gold;
 
     @media #{$medium-down} {
       font-size: $font-size__base;
