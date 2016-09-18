@@ -18,7 +18,7 @@
 
     &:hover { 
       color: $color__type--hover; 
-      border-bottom: 3px solid #826d8c;
+      border-bottom: 3px solid $title__underline;
     }
   }
 
@@ -55,6 +55,8 @@
     a {
       transition: $base-transition-speed;
       text-decoration: none;
+      border-bottom: 3px solid $title__underline;
+
 
       @media #{$medium-down} {
         display: block;
