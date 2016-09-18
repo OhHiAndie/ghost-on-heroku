@@ -17,6 +17,7 @@
     letter-spacing: 1px;
 
     &:hover { color: $color__type--hover; }
+    text-decoration: underline;
   }
 
   &__img {
