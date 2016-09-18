@@ -55,8 +55,10 @@
     a {
       transition: $base-transition-speed;
       text-decoration: none;
-      border-bottom: 3px solid $title__underline;
 
+      &:hover {
+      border-bottom: 3px solid $title__underline;
+      }
 
       @media #{$medium-down} {
         display: block;
