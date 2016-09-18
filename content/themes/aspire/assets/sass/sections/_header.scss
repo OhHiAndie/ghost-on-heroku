@@ -16,8 +16,8 @@
     text-decoration: none;
     letter-spacing: 1px;
 
-    &:hover { color: $color__type--hover; }
-    text-decoration: underline;
+    &:hover { color: $color__type--hover; 
+      text-decoration: border-bottom 3px #826d8c;}
   }
 
   &__img {
